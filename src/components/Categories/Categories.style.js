@@ -1,11 +1,9 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  text: {
+    fontSize: 12,
   },
-
-  bodyContainer: {},
 });
 
 export default styles;

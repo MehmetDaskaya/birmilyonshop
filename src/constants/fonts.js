@@ -1,6 +1,6 @@
 const fonts = {
-  fontSize: 20,
-  color: "#FF2B2B",
+  fontSize: 18,
+  color: "black",
   fontWeigth: "bold",
 };
 
