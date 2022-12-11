@@ -1,12 +1,9 @@
 import { View, Alert, Text, TouchableOpacity, TextInput } from "react-native";
-import React, { useEffect } from "react";
+import React from "react";
 import { auth } from "../../../api/firebase";
 import { useDispatch } from "react-redux";
 import { setSignedIn } from "../../../store/slices/navSlice";
-import { setFilteredItem } from "../../../store/slices/itemSlice";
 import styles from "./Search.style";
-
-import axios from "axios";
 
 const Search = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -35,13 +32,17 @@ const Search = ({ navigation }) => {
         <Text style={styles.searchText}>Search</Text>
       </TouchableOpacity>
 
-      <Text>Search</Text>
       <View>
         <TouchableOpacity
-          style={{ backgroundColor: "red" }}
+          style={{
+            backgroundColor: "red",
+            alignSelf: "center",
+            padding: 20,
+            marginTop: 440,
+          }}
           onPress={handleSignOut}
         >
-          <Text>Çıkış Yap</Text>
+          <Text>Exit</Text>
         </TouchableOpacity>
       </View>
     </View>

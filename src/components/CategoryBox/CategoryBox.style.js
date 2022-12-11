@@ -3,11 +3,13 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    backgroundColor: "green",
+    backgroundColor: "#ffaf7a",
     height: 40,
     width: "100%",
     alignItems: "center",
     justifyContent: "space-between",
+    borderColor: "black",
+    borderWidth: 1,
   },
   categoryBox: {
     flex: 1,

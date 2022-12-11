@@ -1,22 +1,35 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  signedIn: null,
+  piece: 0,
+  favorites: [],
 };
 
 export const itemSlice = createSlice({
   name: "item",
   initialState,
   reducers: {
-    setFilteredItem: (state, action) => {
-      state.signedIn = action.payload;
+    setItemPiece: (state, action) => {
+      state.piece = action.payload;
+    },
+
+    setFavorites: (state, action) => {
+      const favItem = state.favorites.find(
+        (item) => item.id == action.payload.id
+      );
+      if (favItem) {
+        favItem.quantity + 1;
+      } else {
+        state.favorites.push({ ...action.payload, quantity: 1 });
+      }
     },
   },
 });
 
-export const { setFilteredItem } = itemSlice.actions;
+export const { setItemPiece, setFavorites } = itemSlice.actions;
 
 //Selectors
-export const selectFilteredItem = (state) => state.item.filteredItem;
+export const selectItemPiece = (state) => state.item.piece;
+export const selectFavorites = (state) => state.item.favorites;
 
 export default itemSlice.reducer;

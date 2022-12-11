@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   piece: 0,
   totalSum: 0,
-  favorites: [],
+  cart: [],
 };
 
 export const cartSlice = createSlice({
@@ -16,17 +16,17 @@ export const cartSlice = createSlice({
     setTotalSum: (state, action) => {
       state.totalSum = action.payload;
     },
-    setFavorites: (state, action) => {
-      state.favorites = action.payload;
+    setCart: (state, action) => {
+      state.cart.push(action.payload);
     },
   },
 });
 
-export const { setCartPiece, setTotalSum, setFavorites } = cartSlice.actions;
+export const { setCartPiece, setTotalSum, setCart } = cartSlice.actions;
 
 //Selectors
 export const selectCartPiece = (state) => state.cart.piece;
 export const selectTotalSum = (state) => state.cart.totalSum;
-export const selectFavorites = (state) => state.cart.favorites;
+export const selectCart = (state) => state.cart.cart;
 
 export default cartSlice.reducer;

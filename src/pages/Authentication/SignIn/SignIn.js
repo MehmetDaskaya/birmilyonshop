@@ -11,7 +11,6 @@ import { useDispatch } from "react-redux";
 import { setSignedIn } from "../../../../store/slices/navSlice";
 
 import styles from "./SignIn.style";
-import SignUp from "../SignUp";
 
 const SignIn = ({ navigation }) => {
   const [email, setEmail] = useState("");

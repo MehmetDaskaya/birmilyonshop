@@ -1,7 +1,32 @@
-import { StyleSheet } from "react-native";
-import fonts from "../../constants/fonts";
+import { Dimensions, StyleSheet } from "react-native";
+
+const deviceSize = Dimensions.get("window");
 
 export default StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  image: {
+    marginTop: 20,
+    width: deviceSize.width,
+    height: deviceSize.height / 3,
+    resizeMode: "contain",
+    backgroundColor: "white",
+  },
+  bodyContainer: {
+    padding: 20,
+  },
+
+  button: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  buttonItem: {
+    marginHorizontal: 3,
+  },
+
   container: {
     flex: 1,
     flexDirection: "row",
@@ -27,8 +52,8 @@ export default StyleSheet.create({
     flexDirection: "row",
   },
   title: {
-    fontSize: fonts.fontSize,
-    color: fonts.color,
+    fontSize: 16,
+    color: "black",
     width: "80%",
   },
   favButton: {

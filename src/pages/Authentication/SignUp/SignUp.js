@@ -12,7 +12,6 @@ import { useDispatch } from "react-redux";
 import { setSignedIn } from "../../../../store/slices/navSlice";
 
 import styles from "./SignUp.style";
-import SignIn from "../SignIn";
 
 const SignUp = ({ navigation }) => {
   const dispatch = useDispatch();
