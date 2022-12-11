@@ -17,7 +17,7 @@ import Loading from "../../components/Loading/Loading";
 import Error from "../../components/Error";
 import Button from "../../components/Button";
 
-const Detail = ({ route, product, addToCart }) => {
+const Detail = ({ route }) => {
   const piece = useSelector(selectCartPiece);
   const totalSum = useSelector(selectTotalSum);
   const dispatch = useDispatch();
